@@ -34,6 +34,7 @@ self.addEventListener('install', function(event) {
 
   var urlsToPrefetch = [
     'sample-data/weather.json',
+    '_framework/wasm/mono.wasm'
   ];
 
   // All of these logging statements should be visible via the "Inspect" interface
