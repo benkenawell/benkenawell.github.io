@@ -1,7 +1,9 @@
 import { Category } from './category';
-export const resume = [
+import { IResume } from '../types';
+
+export const resume: IResume[] = [
   {
-    category: Category.education,
+    category: Category.Education,
     school: "The Pennsylvania State University",
     location: "University Park, PA",
     graduationYear: "2018",
@@ -9,7 +11,7 @@ export const resume = [
     minor: "Entrepreneurship and Innovation"
   },
   {
-    category: Category.work,
+    category: Category.Work,
     company: "Microsoft",
     startDate: "2018",
     endDate: undefined,
@@ -24,7 +26,7 @@ export const resume = [
     ]
   },
   {
-    category: Category.work,
+    category: Category.Work,
     company: "Microsoft",
     title: "Software Development Intern",
     startDate: "2017",
@@ -36,7 +38,7 @@ export const resume = [
     ]
   },
   {
-    category: Category.work,
+    category: Category.Work,
     company: "Penn State Residence Life",
     title: "Resident Assistant",
     startDate: "2016",
@@ -48,7 +50,7 @@ export const resume = [
     ]
   },
   {
-    category: Category.work,
+    category: Category.Work,
     company: "Army Research Lab",
     title: "Software Development Intern",
     startDate: "2015",
@@ -60,7 +62,7 @@ export const resume = [
     ]
   },
   {
-    category: Category.work,
+    category: Category.Work,
     company: "Penn State ITS Lab Consultants",
     title: "Lab Consultant, Lab Consultant Supervisor",
     startDate: "2014",
@@ -73,29 +75,29 @@ export const resume = [
     ]
   },
   {
-    category: Category.volunteer,
+    category: Category.Volunteer,
     organization: "King County Emergency Search and Rescue (KCESAR)",
     startDate: "2019",
     endDate: undefined,
   },
   {
-    category: Category.volunteer,
+    category: Category.Volunteer,
     organization: "Technology Education and Literacy in Schools (TEALS)",
     startDate: "2019",
     endDate: "2020"
   },
   {
-    category: Category.accomplishments,
+    category: Category.Accomplishments,
     award: "Eagle Scout",
     date: "Class of 2013",
   },
   {
-    category: Category.accomplishments,
+    category: Category.Accomplishments,
     award: "SAFe 4.6 Certified",
     date: "2020"
   },
   {
-    category: Category.programming,
+    category: Category.Programming,
     description: [
       "Use Professtionally: Typescript, React, Redux, RxJS, C#",
       "On my own time: Rust, Elixir, F#, RamdaJS, PureScript"
