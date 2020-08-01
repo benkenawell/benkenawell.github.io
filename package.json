@@ -18,14 +18,16 @@
     "@typescript-eslint/parser": "^3.7.1",
     "eslint": "^7.5.0",
     "gatsby": "^2.23.12",
+    "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-typescript": "^2.4.16",
+    "node-sass": "^4.14.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "typescript": "^3.9.7"
   },
   "devDependencies": {
-    "prettier": "2.0.5",
-    "@types/react": "^16.9.43"
+    "@types/react": "^16.9.43",
+    "prettier": "2.0.5"
   },
   "repository": {
     "type": "git",

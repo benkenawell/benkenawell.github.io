@@ -1,41 +1,27 @@
-import { createElement as e, Fragment} from 'react';
-import { Card, ICardProps } from '../components';
-import {resume} from '../data/data';
-import { sections } from "../data/sections";
+import { createElement as e} from 'react';
+import { Card, ICardProps, Container, IContainerProps } from '../components';
+import {resume, sections} from '../data';
 import {resumeToComponent} from '../transformations';
 import { ICategory } from '../types';
 
 export default function Home(): JSX.Element {
-  return e(Fragment, {}, 
+  return e(Container, { onClick: clickHandler} as IContainerProps, 
     sections.map((cate) =>
-      e(Card, 
-        {
-          title: cate.label
-        } as ICardProps, // assertion because I'm having trouble with children
-        resume.filter(x => x.category === cate.key).map(resumeToComponent)
-      )
+    e(Card, 
+      {
+        title: cate.label
+      } as ICardProps, // assertion because I'm having trouble with children
+      resume.filter(x => x.category === cate.key).map(resumeToComponent)
     )
-  );
+  ));
+
 }
 
-const clickHandler = (ev) => {
+const clickHandler = (ev): void => {
   const category: ICategory | undefined = sections.find(({keyCode}) => keyCode === ev.code);
   const title: string | undefined = !!category ? category.label : undefined;
-  if(!!title) document.getElementById(title).scrollIntoView();
-  // switch (ev.code) {
-  //   case 'KeyP':
-  //     document.getElementById('Professional Experience').scrollIntoView();
-  //     break;
-  //   case 'KeyE':
-  //     document.getElementById('Education').scrollIntoView();
-  //     break;
-  //   case 'KeyV':
-  //     document.getElementById('Volunteer Activities').scrollIntoView();
-  //     break;
-  //   case 'KeyA':
-  //     document.getElementById('Additional Accomplishments and Awards').scrollIntoView();
-  //   case 'KeyC':
-  //     document.getElementById('Familiar Programming Languages, Frameworks, and Technologies').scrollIntoView();
-  // }
+  if(!!title) {
+    const elem = ev.currentTarget.getElementById(title);
+    if (!!elem) elem.scrollIntoView();
+  }
 }
-document.onkeydown = clickHandler;
