@@ -1,0 +1,16 @@
+
+.card {
+  border: solid;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+  background: lightsteelblue;
+  transition: background 1s, box-shadow 1s;
+
+
+  &:hover {
+    background: lightblue;
+    box-shadow: 5px 5px 5px;
+  }
+}

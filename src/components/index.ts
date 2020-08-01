@@ -1,3 +1,3 @@
-export { Card, ICardProps } from './Card';
-export { Position } from './Position';
-export { Container, IContainerProps } from './Container';
+export { Card, ICardProps } from './Card/Card';
+export { Position } from './Position/Position';
+export { Container, IContainerProps } from './Container/Container';

@@ -1,4 +1,5 @@
 import React from 'React';
+import positionStyles from './position.module.scss';
 
 
 interface IPositionProps {
@@ -16,8 +17,11 @@ interface IPositionProps {
 const Position = ({title, date, description = [], location}: Partial<IPositionProps>): JSX.Element => {
 
   // this could probably stand to be broken up more
-  return <div>
-    <div style={{width: "100%"}}><span>{title}{!!location ? `, ${location}`: ""}</span><span style={{float: "right"}}>{date}</span></div>
+  return <div className={positionStyles.positionContainer}>
+    <div className={positionStyles.position}>
+      <span>{title}{!!location ? `, ${location}`: ""}</span>
+      <span style={{float: "right"}}>{date}</span>
+    </div>
     <ul>
       {description.map(val => <li>{val}</li>)}
     </ul>

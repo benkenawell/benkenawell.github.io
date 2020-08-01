@@ -5,7 +5,7 @@ import {resumeToComponent} from '../transformations';
 import { ICategory } from '../types';
 
 export default function Home(): JSX.Element {
-  return e(Container, { onClick: clickHandler} as IContainerProps, 
+  return e(Container, { onKeyDown: keyHandler} as IContainerProps, 
     sections.map((cate) =>
     e(Card, 
       {
@@ -17,7 +17,8 @@ export default function Home(): JSX.Element {
 
 }
 
-const clickHandler = (ev): void => {
+const keyHandler = (ev): void => {
+  console.log(ev);
   const category: ICategory | undefined = sections.find(({keyCode}) => keyCode === ev.code);
   const title: string | undefined = !!category ? category.label : undefined;
   if(!!title) {
@@ -25,3 +26,4 @@ const clickHandler = (ev): void => {
     if (!!elem) elem.scrollIntoView();
   }
 }
+document.onkeydown = keyHandler;
