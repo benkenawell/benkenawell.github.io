@@ -26,4 +26,3 @@ const keyHandler = (ev): void => {
     if (!!elem) elem.scrollIntoView();
   }
 }
-document.onkeydown = keyHandler;

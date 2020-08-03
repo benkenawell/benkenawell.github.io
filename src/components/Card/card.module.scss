@@ -1,6 +1,6 @@
 
 .card {
-  border: solid;
+  border: solid 1px;
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
@@ -13,4 +13,8 @@
     background: lightblue;
     box-shadow: 5px 5px 5px;
   }
+}
+
+.title {
+  font-family: sans-serif;
 }

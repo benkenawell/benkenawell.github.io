@@ -14,7 +14,7 @@ interface ICardProps {
  */
 const Card: React.FunctionComponent<ICardProps> = ({children, title}: ICardProps): JSX.Element => {
   return <div id={title} className={cardStyles.card}>
-   <h2>{title}</h2>
+   <h2 className={cardStyles.title}>{title}</h2>
    {children} 
   </div>;
 }

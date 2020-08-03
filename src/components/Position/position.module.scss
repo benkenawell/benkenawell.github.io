@@ -1,12 +1,13 @@
 
 .positionContainer {
+  margin-left: 3px;
+  padding-left: 5px;
   &:hover {
-    border-top: solid;
-    border-bottom: solid;
+    border-left: solid 3px;
+    margin-left: 0px;
   }
 }
 
 .position {
   width: 100%;
-
 }
