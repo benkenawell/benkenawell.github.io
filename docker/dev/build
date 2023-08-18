@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-docker build -f ../dev.dockerfile -t resume-site
+rootdir="`git rev-parse --show-toplevel`"
+docker build -f "$rootdir/docker/dev.dockerfile" -t resume-site "$rootdir"

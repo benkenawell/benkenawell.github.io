@@ -11,4 +11,4 @@ RUN npm install --global pnpm
 # port for testing
 EXPOSE 80
 
-WORKDIR /home
+WORKDIR /root
