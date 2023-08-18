@@ -1,0 +1,1 @@
+winpty docker run -it --rm --volume "/c/Users/benke/Sync/Jobs/Resume Website/resume:/home" --port 80:80 node bash
