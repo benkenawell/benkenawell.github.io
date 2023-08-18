@@ -1,7 +1,6 @@
 import React from 'React';
 import positionStyles from './position.module.scss';
 
-
 interface IPositionProps {
   title: string;
   date: string;
@@ -14,7 +13,7 @@ interface IPositionProps {
  * Will probably contain other information
  * example, one degree or one job
  */
-const Position = ({title, date, description = [], location}: Partial<IPositionProps>): JSX.Element => {
+const Position: React.FunctionComponent<Partial<IPositionProps>> = ({title, date, description = [], location}) => {
 
   // this could probably stand to be broken up more
   return <div className={positionStyles.positionContainer}>

@@ -16,5 +16,18 @@
 }
 
 .title {
-  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  & > h2 {
+    font-family: sans-serif;
+  }
+  & > button {
+    font-style: underline;
+    background: unset;
+    text-decoration: underline;
+    border: unset;
+    color: black;
+  }
 }

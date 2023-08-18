@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cardStyles from './card.module.scss';
 
 
@@ -10,22 +10,25 @@ interface ICardProps {
 /**
  * This will be for each top level section.
  * Example of a card: Professional Experience, Education
- * @param {{title: string}} props
  */
-const Card: React.FunctionComponent<ICardProps> = ({children, title}: ICardProps): JSX.Element => {
-  return <div id={title} className={cardStyles.card}>
-   <h2 className={cardStyles.title}>{title}</h2>
-   {children} 
+const Card: React.FunctionComponent<ICardProps> = ({children, title}) => {
+
+  const [isExpanded, toggleExpanded, expandLabel]: [boolean, (() => void), string] = useLabelledToggle(true, 'collapse', 'expand');
+
+  return <div id={title} className={cardStyles.card} >
+    <div className={cardStyles.title}>
+      <h2>{title}</h2>
+      <button aria-label={`${expandLabel} ${title} section`} onClick={toggleExpanded}>{expandLabel}</button>
+    </div>
+    {isExpanded && children} 
   </div>;
 }
 
-// const style: React.CSSProperties = {
-//   border: "solid",
-//   paddingLeft: "10px",
-//   paddingRight: "10px",
-//   margin: "10px",
-//   background: "lightblue",
-//   boxShadow: "5px 5px"
-// }
+
+const useLabelledToggle = (startVal: boolean, trueLabel: string, falseLabel: string): [boolean, () => void, string] => {
+  const [toggle, setToggle] = useState<boolean>(startVal);
+
+  return [toggle, () => setToggle(!toggle), toggle ? trueLabel : falseLabel];
+}
 
 export { Card, ICardProps };
