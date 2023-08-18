@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-winpty docker run -it --rm --volume "/c/Users/benke/Sync/Jobs/Resume Website/resume:/root" -p 80:80 resume-site bash
+winpty docker run -it --rm --volume "/c/Users/benke/Sync/Jobs/Resume Website/resume:/root" -p 3000:3000 resume-site bash

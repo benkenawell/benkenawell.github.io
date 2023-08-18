@@ -70,3 +70,4 @@ yarn-error.log
 
 .pnpm-store
 .bash_history
+.local
