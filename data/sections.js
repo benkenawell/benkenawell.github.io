@@ -1,7 +1,10 @@
 import {Category} from './category';
 import { ICategory } from '../types';
 
- const sections: ICategory[] = [
+/**
+ * @type ICategory[]
+ */
+ const sections = [
    {
      label: "Education",
      key: Category.Education,

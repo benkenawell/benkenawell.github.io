@@ -1,7 +1,10 @@
 import { Category } from './category';
-import { IResume } from '../types';
 
-export const resume: IResume[] = [
+/**
+ * @type IResume[]
+ */
+ 
+export const resume = [
   {
     category: Category.Education,
     school: "The Pennsylvania State University",
