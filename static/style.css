@@ -1,0 +1,14 @@
+:root {
+--green-100: #48e929;
+--green-200: #80f563;
+--green-300: #afffb4;
+--green-400: #ffebbd;
+--green-500: #FFFAF0;
+
+--bg-default: var(--green-500);
+--bg-emphasis: var(--green-400);
+}
+
+body {
+  background-color: var(--bg-default);
+}

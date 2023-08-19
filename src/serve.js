@@ -10,6 +10,7 @@ const viewdir = join(rootdir, 'views');
 
 app.set('view engine', 'ejs');
 app.set('views', viewdir);
+app.use(express.static(join(rootdir, 'static')));
 
 app.get('/', function(req, res) {
   res.render('index.ejs');
