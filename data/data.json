@@ -1,0 +1,34 @@
+[
+  {
+    "title": "",
+    "description": [""],
+    "start": "",
+    "end": "",
+    "location": "",
+    "organization": "",
+    "category": ""
+  },
+  {
+    "title": "",
+    "description": ["Major: Computer Engineering", "Minor: Extrepreneurship and Innovation"],
+    "end": "2018",
+    "location": "University Park, PA",
+    "organization": "The Pennsylvania State University",
+    "category": "Education"
+  },
+  {
+    "title": "Software Engineer",
+    "description": [
+      "Promote a better employee experience by writing intuitive and accessible internal web applications for enterprise by leveraging Typescript and React/Redux while maintaining team and organization coding standards",
+      "Create a better customer experience on the Sharepoint Platform",
+      "Collaborate with other teams across products to deliver well-written, thoughtful improvements to SERP and emploees' experience",
+      "Write, refactor, and modernize C# applications to better connect disparate enterprise experiences",
+      "Facilitate strategic decisions to determine the highest proirity work for the next sprint/quarter/year"
+    ],
+    "start": "2018",
+    "end": "2021",
+    "location": "Redmond, WA",
+    "organization": "Microsoft",
+    "category": "Work"
+  }
+]

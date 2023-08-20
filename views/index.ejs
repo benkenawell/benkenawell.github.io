@@ -10,6 +10,22 @@
     </header>
     <main>
       <h3>Job Experience</h3>
+      <% resume.forEach(function (entry) { %>
+        <div class="section">
+          <h4><%= entry.title %></h4>
+          <h5><%= entry.organization %>
+          <p><%= entry.location %></p>
+          <p><%= entry.start %> - <%= entry.end %></p>
+          <% entry.description.forEach(function (d) { %>
+           <p><%= d %></p>
+          <% }); %>
+        </div>
+      <% }); %>
+      <% Object.entries(data).forEach(function([key, value]) { %>
+        <div style="display: flex; fles-direction: row"><h4><%= key %></h4>
+        <%= JSON.stringify(value) %>
+        </div>
+      <% }); %>
     </main>
     <footer>
 

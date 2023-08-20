@@ -1,6 +1,9 @@
 import express from 'express';
 import { join } from 'path';
 import { fileURLToPath } from 'url';
+import { resume } from '../data/data.js';
+import r from "../data/data.json" assert { type: "json" };
+console.log(r);
 
 const app = express();
 const port = 3000;
@@ -13,7 +16,15 @@ app.set('views', viewdir);
 app.use(express.static(join(rootdir, 'static')));
 
 app.get('/', function(req, res) {
-  res.render('index.ejs');
+  const byCategory = resume.reduce((acc, cur) => {
+    if(Array.isArray(acc[cur.category])) {
+      acc[cur.category].push(cur);
+    } else {
+      acc[cur.category] = [cur];
+    }
+    return acc;
+  }, {});
+  res.render('index.ejs', {data: byCategory, resume: r});
 });
 
 app.listen(port, () => {console.log(`listening at ${port}`)});
