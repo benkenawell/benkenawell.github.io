@@ -1,9 +1,8 @@
 import express from 'express';
 import { join } from 'path';
 import { fileURLToPath } from 'url';
+import { readFileSync } from 'fs';
 import { resume } from '../data/data.js';
-import r from "../data/data.json" assert { type: "json" };
-console.log(r);
 
 const app = express();
 const port = 3000;
@@ -24,7 +23,9 @@ app.get('/', function(req, res) {
     }
     return acc;
   }, {});
-  res.render('index.ejs', {data: byCategory, resume: r});
+  const r = JSON.parse(readFileSync(join(rootdir, "data/data.json"), {encoding: 'utf8'}));
+  console.log(r);
+  res.render('index.ejs', {data: [], resume: r});
 });
 
 app.listen(port, () => {console.log(`listening at ${port}`)});
