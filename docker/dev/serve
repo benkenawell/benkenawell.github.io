@@ -2,16 +2,19 @@
 
 # check if a container is already running
 running_container=`docker ps --filter "name=my-resume" --filter "status=running" --quiet`
+rootdir=`git rev-parse --show-toplevel`
 
 if [ -n "$running_container" ]; then
   # attach to running container
-  winpty docker exec -it my-resume bash
+  winpty docker exec -d my-resume node src/serve.js
 else
   # start a new container
-  winpty docker run -it --rm \
-    --volume "/c/Users/benke/Sync/Jobs/Resume Website/resume:/root" \
+  winpty docker run -dit --rm \
     -p 3000:3000 \
+    --volume "$rootdir:/root" \
     --name my-resume \
-    resume-site bash
+    resume-site node serve.js
 fi
 
+
+    # --volume "/c/Users/benke/Sync/Jobs/Resume Website/resume:/root" \

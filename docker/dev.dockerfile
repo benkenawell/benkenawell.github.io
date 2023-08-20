@@ -4,7 +4,7 @@ LABEL org.opencontainers.image.authors="Ben Kenawell"
 
 RUN apt update
 # editor
-RUN apt install -y kakoune
+RUN apt install -y kakoune jq tmux
 # global npm packages
 RUN npm install --global pnpm
 
