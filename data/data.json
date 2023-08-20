@@ -1,15 +1,6 @@
 [
   {
     "title": "",
-    "description": [""],
-    "start": "",
-    "end": "",
-    "location": "",
-    "organization": "",
-    "category": ""
-  },
-  {
-    "title": "",
     "description": ["Major: Computer Engineering", "Minor: Extrepreneurship and Innovation"],
     "end": "2018",
     "location": "University Park, PA",
@@ -30,5 +21,70 @@
     "location": "Redmond, WA",
     "organization": "Microsoft",
     "category": "Work"
+  },
+  {
+    "title": "Software Development Intern",
+    "description": [
+      "Develop IT productivity tools and data driven graphics for highly visual internal telemetry (d3.js)",
+      "Learn and teach team dynamics in a business programming environment"
+    ],
+    "start": "2017",
+    "end": "2017",
+    "location": "Redmond, WA",
+    "organization": "Microsoft",
+    "category": "Work"
+  },
+  {
+    "title": "Resident Assistant",
+    "description": [
+      "Assist students in their transition from grade school at home to life in a residence hall at a university",
+      "Create a sense of community in a residence hall floor so it may be a place everyone has a voice and feels welcome"
+    ],
+    "start": "2016",
+    "end": "2017",
+    "location": "University Park, PA",
+    "organization": "Penn State Residence Life",
+    "category": "Work"
+  },
+  {
+    "title": "Lab Consultant, Lab Consultant Supervisor",
+    "description": [
+      "Assist students and faculty troubleshoot computer lab equipment",
+      "Maintain professionalism and improve community amoung the staff",
+      "Keep up-to-date inventory for labs across campus"
+    ],
+    "start": "2014",
+    "end": "2018",
+    "location": "University Park, PA",
+    "organization": "Penn State ITS Lab Consultant",
+    "category": "Work"
+  },
+  {
+    "start": "2019",
+    "end": "2021",
+    "organization": "King County Emergency Search and Rescue (KCESAR)",
+    "category": "Volunteer"
+  },
+  {
+    "start": "2019",
+    "end": "2020",
+    "organization": "Technology Education and Literacy in Schools (TEALS)",
+    "category": "Volunteer"
+  },
+  {
+    "end": "Class of 2013",
+    "title": "Eagle Scout",
+    "category": "Accomplishments"
+  },
+  {
+    "end": "2020",
+    "title": "SAFe 4.6 Certified",
+    "category": "Accomplishments"
+  },
+  {
+    "description": [
+      "Use Professionally: Typescript, React, NextJS, NestJS, SQL, Bash, GraphQL",
+      "On my own time: HTMX, Alpine.JS, Elixir, Lisps"
+    ]
   }
 ]

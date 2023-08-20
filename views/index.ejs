@@ -9,16 +9,16 @@
       <h2>Ben Kenawell Resume</h2>
     </header>
     <main>
-      <h3>Job Experience</h3>
+      <!-- <h3>Job Experience</h3> -->
       <% resume.forEach(function (entry) { %>
-        <div class="section">
+        <div class="section" data-category="<%= entry.category %>">
           <h4><%= entry.title %></h4>
-          <h5><%= entry.organization %>
+          <h5><%= entry.organization %></h5>
           <p><%= entry.location %></p>
-          <p><%= entry.start %> - <%= entry.end %></p>
-          <% entry.description.forEach(function (d) { %>
-           <p><%= d %></p>
+          <% (entry.description ?? []).forEach(function (desc) { %>
+           <p class="description"><%= desc %></p>
           <% }); %>
+          <p class="date"><%= entry.start %><%= !!entry.start && !!entry.end ? " - " : "" %><%= entry.end %></p>
         </div>
       <% }); %>
       <% Object.entries(data).forEach(function([key, value]) { %>
@@ -28,7 +28,7 @@
       <% }); %>
     </main>
     <footer>
-
+      <p>Made with <a href="https://ejs.co">EJS</a> and <a href="https://alpinejs.dev/">Alpine</a></p>
     </footer>
   </body>
 </html>
