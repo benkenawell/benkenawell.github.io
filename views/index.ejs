@@ -2,7 +2,9 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="section-selection.css">
     <title>Resume Page</title>
+    <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
   </head>
   <body>
     <header>
@@ -11,7 +13,7 @@
     <main>
       <!-- <h3>Job Experience</h3> -->
       <% resume.forEach(function (entry) { %>
-        <div class="section" data-category="<%= entry.category %>">
+        <div class="section" data-category="<%= entry.category %>" _="on click toggle .selected">
           <h4><%= entry.title %></h4>
           <h5><%= entry.organization %></h5>
           <p><%= entry.location %></p>
@@ -26,9 +28,11 @@
         <%= JSON.stringify(value) %>
         </div>
       <% }); %>
+      <!-- TODO, make this button appear only when there are .section.selected classes -->
+      <button class="focus-selected">Focus Selected Sections</button>
     </main>
     <footer>
-      <p>Made with <a href="https://ejs.co">EJS</a> and <a href="https://alpinejs.dev/">Alpine</a></p>
+      <p>Made with <a href="https://ejs.co">EJS</a> and <a href="https://hyperscript.org/">Hyperscript</a></p>
     </footer>
   </body>
 </html>

@@ -1,0 +1,23 @@
+.section.selected {
+  background-color: var(--bg-emphasis);
+}
+
+button.focus-selected {
+  position: fixed;
+  top: 10vh;
+  right: 10vw;
+
+  border: 1px solid red;
+  background-color: lightyellow;
+  padding: 5px;
+  border-radius: 3px;
+
+  /* TODO: can I transition the background color
+   * on hover but not to active? */
+}
+button.focus-selected:hover {
+  background-color: greenyellow;
+}
+button.focus-selected:active {
+  background-color: yellowgreen;
+}
