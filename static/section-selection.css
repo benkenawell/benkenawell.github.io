@@ -2,7 +2,7 @@
   background-color: var(--bg-emphasis);
 }
 
-button.focus-selected {
+/*button.focus-selected {
   position: fixed;
   top: 10vh;
   right: 10vw;
@@ -14,10 +14,25 @@ button.focus-selected {
 
   /* TODO: can I transition the background color
    * on hover but not to active? */
-}
+}*/
 button.focus-selected:hover {
   background-color: greenyellow;
 }
 button.focus-selected:active {
   background-color: yellowgreen;
+}
+
+#dropdown {
+  position: fixed;
+  bottom: 100vh;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  transition: bottom 2s
+}
+#dropdown.show {
+  bottom: 0;
+}
+#dropdown > * {
+  padding: 10px 100px;
 }

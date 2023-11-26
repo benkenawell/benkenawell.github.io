@@ -1,0 +1,21 @@
+.compound-button {
+  position: fixed;
+  top: 3vh;
+  right: 1vw;
+
+  border: 1px solid red;
+  background-color: lightyellow;
+  padding: 0px 5px;
+  border-radius: 3px;
+}
+.compound-button > button {
+  background: transparent;
+  padding: 5px 10px;
+  border: 0px;
+}
+.compound-button > button:hover {
+  background:yellow; 
+}
+.compound-button > button:not(:last-child) {
+  border-right: 1px solid black;
+}

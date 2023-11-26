@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="section-selection.css">
+    <link rel="stylesheet" href="compound-button.css">
     <title>Resume Page</title>
     <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
   </head>
@@ -28,11 +29,26 @@
         <%= JSON.stringify(value) %>
         </div>
       <% }); %>
-      <!-- TODO, make this button appear only when there are .section.selected classes -->
-      <button class="focus-selected">Focus Selected Sections</button>
     </main>
     <footer>
       <p>Made with <a href="https://ejs.co">EJS</a> and <a href="https://hyperscript.org/">Hyperscript</a></p>
     </footer>
+    
+    <div class="compound-button" hidden _="on click from .section if .selected exists remove @hidden else add @hidden">
+      <button class="focus-selected" 
+        _="-- show/hide the button when selecting exists
+           -- on click from .section if .selected exists remove @hidden else add @hidden end
+           -- clone then add all sections into #dropdown section
+           on click repeat for item in .selected
+             call item.cloneNode(true)
+             remove .selected from it
+             put it at the end of #dropdown then add .show to #dropdown
+           end"
+      >
+        Focus Selected Sections
+      </button>
+      <button _="on click repeat for item in .selected remove .selected from item then add @hidden to .compound-button">X</button>
+    </div>
+    <section id="dropdown" _="on click remove .show then wait 1s then remove <div/> from me"></section>
   </body>
 </html>
